@@ -4,9 +4,11 @@ use strict;
 use warnings;
 use BSD::Resource;
 use Time::HiRes qw( gettimeofday tv_interval );
+use Proc::CPUUsage;
 
 my $t0;
 my $r0;
+my $cpu = Proc::CPUUsage->new;
 
 sub check_resources {
   my $desc  = shift;
@@ -29,6 +31,8 @@ sub check_resources {
   printf(', real %0.4f', $dt) if defined $dt;
   printf(', CPU %0.4f', $dr)  if defined $dr;
   printf(', usage %0.4f%%', $dr/$dt*100) if defined $dr && defined $dt;
+
+  printf(', new usage %0.4f%%', $cpu->usage*100);
   
   print " ($desc):\n";
   for my $name (@names) {
