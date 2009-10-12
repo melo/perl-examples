@@ -16,7 +16,9 @@ use Catalyst::Runtime 5.80;
 use parent qw/Catalyst/;
 use Catalyst qw/-Debug
                 ConfigLoader
-                Static::Simple/;
+                Static::Simple
+                Authentication
+                /;
 our $VERSION = '0.01';
 
 # Configure the application.
@@ -28,7 +30,31 @@ our $VERSION = '0.01';
 # with an external configuration file acting as an override for
 # local deployment.
 
-__PACKAGE__->config( name => 'Auth' );
+__PACKAGE__->config(
+  'Plugin::Authentication' => {
+    default => {
+      credential => {
+        class          => 'Password',
+        password_field => 'password',
+        password_type  => 'clear'
+      },
+      store => {
+        class => 'Minimal',
+        users => {
+          bob => {
+            password => "s00p3r",
+            editor   => 'yes',
+            roles    => [qw/edit delete/],
+          },
+          william => {
+            password => "s3cr3t",
+            roles    => [qw/comment/],
+          }
+        }
+      }
+    }
+  }
+);
 
 # Start the application
 __PACKAGE__->setup();
