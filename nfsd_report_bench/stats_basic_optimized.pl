@@ -3,6 +3,13 @@
 #use strict;
 #use warnings;
 #use POSIX;
+use Time::HiRes qw( gettimeofday tv_interval );
+
+
+my $t = 0;
+my $lines = 2;
+my $tlast = my $t0 = [gettimeofday];
+my $llines = 2;
 
 my ($header1, %read_ops, %write_ops, %read_bytes, %write_bytes, @req_ops, @res_ops, $date, $h, $d, $m, $y);
 my ($read, $write, $nops) = (0, 0, 0);
@@ -16,6 +23,8 @@ $header1 = <STDIN>;
 $header1 = <STDIN>;
 
 while(<STDIN>) {
+    $lines++;
+    $t += length($_);
     my @field = split ' ', $_;
 
     if ($field[6] eq 'request') {
@@ -40,6 +49,15 @@ while(<STDIN>) {
             $read_ops{$ts}++;
             $read_bytes{$ts} += $field[12];
         }
+    }
+
+    if (($lines & 0x3ffff) == 0) {
+      my $now = [gettimeofday];
+      my $d = tv_interval($tlast, $now);
+      $tlast = $now;
+
+      print STDERR "($d rate ".int(($lines-$llines)/$d).") l:$lines  b:$t ".int($t/(1024*1024))."Mb \n";
+      $llines = $lines;
     }
 }
 
@@ -89,3 +107,10 @@ foreach my $key (keys %write_bytes) {
     print get_date($key), ", ", sprintf("%.2f", ($write_bytes{$key} >> 10) / 1024), "\n";
 }
 print "\n";
+
+my $d = tv_interval($t0);
+
+
+print "lines $lines bytes $t\n";
+print "Size mega ".int($t/(1024*1024))." reads $c\n";
+print "Lines/sec ".int($lines/$d)." MB/sec ".int($t/$d)."\n";
