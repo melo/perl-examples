@@ -3,13 +3,10 @@
 unset LANG
 FILE=nfsd.gz
 
-echo my_stats
-gzcat $FILE | time ./my_stats_basic_optimized.pl
+echo fast_stats.pl
+gzcat $FILE | time /usr/bin/perl ./fast_stats.pl
 
-echo system_perl my_stats
-gzcat $FILE | time /usr/bin/perl ./my_stats_basic_optimized.pl
-
-echo base_line with system_perl
+echo baseline
 gzcat $FILE | time /usr/bin/perl ./stats_basic_optimized.pl
 
 

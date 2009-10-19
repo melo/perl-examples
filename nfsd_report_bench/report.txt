@@ -1,0 +1,127 @@
+fast_stats.pl
+  UID   PID  PPID CPU PRI NI      VSZ    RSS WCHAN  STAT   TT       TIME COMMAND
+  502 20456 20455   0  31  0    76876   2008 -      S+   s003    0:00.02 /usr/bin/perl ./fast_stats.pl
+
+
+Parsing nfsdstats records, performance report every 262144 lines
+
+Press Ctrl-C to stop with a final report (pid 20456)
+
+elapsed 1.940124, lines 262144, rate 135117 lines/sec (read 21 MB, rate 10.8240504215195 MB/sec)
+elapsed 1.944038, lines 524288, rate 134845 lines/sec (read 43 MB, rate 10.8022579805539 MB/sec)
+elapsed 1.932992, lines 786432, rate 135615 lines/sec (read 65 MB, rate 10.8639870211568 MB/sec)
+elapsed 1.942247, lines 1048576, rate 134969 lines/sec (read 87 MB, rate 10.812219043201 MB/sec)
+elapsed 1.940561, lines 1310720, rate 135086 lines/sec (read 109 MB, rate 10.8216129253345 MB/sec)
+elapsed 1.942705, lines 1572864, rate 134937 lines/sec (read 131 MB, rate 10.8096700219539 MB/sec)
+elapsed 1.942643, lines 1835008, rate 134941 lines/sec (read 153 MB, rate 10.8100150156256 MB/sec)
+elapsed 1.93956, lines 2097152, rate 135156 lines/sec (read 175 MB, rate 10.827197921178 MB/sec)
+elapsed 1.950721, lines 2359296, rate 134383 lines/sec (read 197 MB, rate 10.7652503869082 MB/sec)
+elapsed 1.940153, lines 2621440, rate 135115 lines/sec (read 219 MB, rate 10.8238886314636 MB/sec)
+elapsed 1.938646, lines 2883584, rate 135220 lines/sec (read 241 MB, rate 10.8323025451784 MB/sec)
+elapsed 1.940173, lines 3145728, rate 135113 lines/sec (read 263 MB, rate 10.8237770549327 MB/sec)
+elapsed 1.942822, lines 3407872, rate 134929 lines/sec (read 285 MB, rate 10.8090190454916 MB/sec)
+elapsed 1.945469, lines 3670016, rate 134745 lines/sec (read 307 MB, rate 10.7943123226327 MB/sec)
+elapsed 1.939015, lines 3932160, rate 135194 lines/sec (read 329 MB, rate 10.8302411275828 MB/sec)
+elapsed 1.934937, lines 4194304, rate 135479 lines/sec (read 350 MB, rate 10.8530665339492 MB/sec)
+elapsed 1.942055, lines 4456448, rate 134982 lines/sec (read 372 MB, rate 10.8132879861796 MB/sec)
+elapsed 2.055427, lines 4718592, rate 127537 lines/sec (read 394 MB, rate 10.216855183862 MB/sec)
+elapsed 2.035364, lines 4980736, rate 128794 lines/sec (read 416 MB, rate 10.3175648188727 MB/sec)
+elapsed 1.941675, lines 5242880, rate 135009 lines/sec (read 438 MB, rate 10.8154042257329 MB/sec)
+elapsed 1.932913, lines 5505024, rate 135621 lines/sec (read 460 MB, rate 10.8644310426801 MB/sec)
+elapsed 1.930737, lines 5767168, rate 135774 lines/sec (read 482 MB, rate 10.87667559072 MB/sec)
+elapsed 1.94065, lines 6029312, rate 135080 lines/sec (read 504 MB, rate 10.8211166361786 MB/sec)
+elapsed 1.938546, lines 6291456, rate 135227 lines/sec (read 526 MB, rate 10.8328613300897 MB/sec)
+elapsed 1.95094, lines 6553600, rate 134368 lines/sec (read 548 MB, rate 10.7640419490092 MB/sec)
+elapsed 1.941143, lines 6815744, rate 135046 lines/sec (read 570 MB, rate 10.8183683530786 MB/sec)
+elapsed 1.943617, lines 7077888, rate 134874 lines/sec (read 592 MB, rate 10.8045978194264 MB/sec)
+elapsed 1.942353, lines 7340032, rate 134962 lines/sec (read 614 MB, rate 10.8116289881396 MB/sec)
+elapsed 1.944669, lines 7602176, rate 134801 lines/sec (read 636 MB, rate 10.7987528983081 MB/sec)
+elapsed 1.949512, lines 7864320, rate 134466 lines/sec (read 658 MB, rate 10.7719265128914 MB/sec)
+elapsed 1.935024, lines 8126464, rate 135473 lines/sec (read 679 MB, rate 10.8525785726689 MB/sec)
+elapsed 1.941973, lines 8388608, rate 134988 lines/sec (read 701 MB, rate 10.8137445783232 MB/sec)
+elapsed 1.938536, lines 8650752, rate 135227 lines/sec (read 723 MB, rate 10.8329172117515 MB/sec)
+elapsed 1.940163, lines 8912896, rate 135114 lines/sec (read 745 MB, rate 10.8238328429106 MB/sec)
+elapsed 1.93635, lines 9175040, rate 135380 lines/sec (read 767 MB, rate 10.8451467968084 MB/sec)
+elapsed 1.938199, lines 9437184, rate 135251 lines/sec (read 789 MB, rate 10.8348007609126 MB/sec)
+elapsed 1.929003, lines 9699328, rate 135896 lines/sec (read 811 MB, rate 10.8864527426862 MB/sec)
+elapsed 1.9432, lines 9961472, rate 134903 lines/sec (read 833 MB, rate 10.806916426513 MB/sec)
+elapsed 1.939364, lines 10223616, rate 135170 lines/sec (read 855 MB, rate 10.8282921617602 MB/sec)
+elapsed 2.017057, lines 10485760, rate 129963 lines/sec (read 877 MB, rate 10.4112080124657 MB/sec)
+elapsed 1.953176, lines 10747904, rate 134214 lines/sec (read 899 MB, rate 10.7517192511069 MB/sec)
+elapsed 1.936752, lines 11010048, rate 135352 lines/sec (read 921 MB, rate 10.8428957347146 MB/sec)
+elapsed 1.977514, lines 11272192, rate 132562 lines/sec (read 943 MB, rate 10.6193938449993 MB/sec)
+elapsed 1.941398, lines 11534336, rate 135028 lines/sec (read 965 MB, rate 10.8169473750359 MB/sec)
+elapsed 1.939426, lines 11796480, rate 135165 lines/sec (read 987 MB, rate 10.8279460005177 MB/sec)
+elapsed 1.93874, lines 12058624, rate 135213 lines/sec (read 1009 MB, rate 10.8317773399218 MB/sec)
+
+
+Number of NFSOps REQUESTS:
+getattr:   	2039398
+lookup:   	2039398
+read:   	3059097
+write:   	3059097
+
+Number of NFSOps RESPONSES:
+Total # of NFSOPs: 	10196990
+Data Read (Gb):   	0.00 Gb
+Data Written (Gb):	0.14 Gb
+Read/Write bytes ratio:	0.00x
+Read/Write ops ratio:	1.00x
+
+
+Number of Read Operations:
+
+Number of Read Mbytes:
+
+Number of Write Operations:
+1970010100, 3059097
+
+Number of Write Mbytes:
+1970010100, 143.92
+
+
+
+FINAL PERFORMANCE REPORT:
+
+elapsed 90.907161, lines 12236388, rate 134603 lines/sec (read 1023 MB, rate 11.2532388950085 MB/sec)
+
+
+  UID   PID  PPID CPU PRI NI      VSZ    RSS WCHAN  STAT   TT       TIME COMMAND
+  502 20456 20455   0  31  0    88224   2144 -      S+   s003    1:30.29 /usr/bin/perl ./fast_stats.pl
+
+
+
+
+
+
+
+baseline
+Number of NFSOps REQUESTS:
+getattr:   	2039398
+lookup:   	2039398
+read:   	3059097
+write:   	3059097
+
+Number of NFSOps RESPONSES:
+getattr:   	1019699
+lookup:   	1019699
+Total # of NFSOPs: 	10196990
+Data Read (Gb):   	0.00 Gb
+Data Written (Gb):	0.14 Gb
+Read/Write bytes ratio:	0.00x
+Read/Write ops ratio:	1.00x
+
+
+Number of Read Operations:
+
+Number of Read Mbytes:
+
+Number of Write Operations:
+2009092423, 3059097
+
+Number of Write Mbytes:
+2009092423, 143.92
+
+lines 12236390 bytes 1073743047
+Size mega 1024 reads 
+Lines/sec 68634 MB/sec 5
