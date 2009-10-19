@@ -1,0 +1,63 @@
+  UID   PID  PPID CPU PRI NI      VSZ    RSS WCHAN  STAT   TT       TIME COMMAND
+  502 20163 20161   0  31  0    76956   2064 -      S+   s003    0:00.03 /usr/bin/perl ./max_line_rate.pl
+
+
+Reading line, performance report every 262144 lines
+
+Press Ctrl-C to stop with a final report (pid 20163)
+
+elapsed 1.34881, lines 262144, rate 194352 lines/sec (read 21 MB, rate 15.5692795871917 MB/sec)
+elapsed 1.330305, lines 524288, rate 197055 lines/sec (read 43 MB, rate 16.5375609352742 MB/sec)
+elapsed 1.333526, lines 786432, rate 196579 lines/sec (read 65 MB, rate 15.7477244538164 MB/sec)
+elapsed 1.324266, lines 1048576, rate 197954 lines/sec (read 87 MB, rate 15.8578412494167 MB/sec)
+elapsed 1.320376, lines 1310720, rate 198537 lines/sec (read 109 MB, rate 16.6619205438451 MB/sec)
+elapsed 1.325031, lines 1572864, rate 197839 lines/sec (read 131 MB, rate 15.8486858043321 MB/sec)
+elapsed 1.328876, lines 1835008, rate 197267 lines/sec (read 153 MB, rate 15.8028288568685 MB/sec)
+elapsed 1.322644, lines 2097152, rate 198196 lines/sec (read 175 MB, rate 16.6333495634502 MB/sec)
+elapsed 1.327959, lines 2359296, rate 197403 lines/sec (read 197 MB, rate 15.813741237493 MB/sec)
+elapsed 1.326296, lines 2621440, rate 197651 lines/sec (read 219 MB, rate 15.8335695802445 MB/sec)
+elapsed 1.331438, lines 2883584, rate 196887 lines/sec (read 241 MB, rate 15.7724204957347 MB/sec)
+elapsed 1.321809, lines 3145728, rate 198322 lines/sec (read 263 MB, rate 15.887318061838 MB/sec)
+elapsed 1.320261, lines 3407872, rate 198554 lines/sec (read 285 MB, rate 15.9059458697939 MB/sec)
+elapsed 1.319155, lines 3670016, rate 198721 lines/sec (read 307 MB, rate 16.6773426928602 MB/sec)
+elapsed 1.329669, lines 3932160, rate 197149 lines/sec (read 329 MB, rate 15.7934042231563 MB/sec)
+elapsed 1.326921, lines 4194304, rate 197558 lines/sec (read 350 MB, rate 15.8261117278271 MB/sec)
+elapsed 1.320708, lines 4456448, rate 198487 lines/sec (read 372 MB, rate 15.9005624256081 MB/sec)
+elapsed 1.323104, lines 4718592, rate 198128 lines/sec (read 394 MB, rate 15.8717682056739 MB/sec)
+elapsed 1.345335, lines 4980736, rate 194854 lines/sec (read 416 MB, rate 15.6094950328357 MB/sec)
+elapsed 1.329536, lines 5242880, rate 197169 lines/sec (read 438 MB, rate 16.5471262154616 MB/sec)
+elapsed 1.325159, lines 5505024, rate 197820 lines/sec (read 460 MB, rate 15.8471549451802 MB/sec)
+elapsed 1.32949, lines 5767168, rate 197176 lines/sec (read 482 MB, rate 15.7955306170035 MB/sec)
+elapsed 1.359153, lines 6029312, rate 192873 lines/sec (read 504 MB, rate 15.450799137404 MB/sec)
+elapsed 1.326525, lines 6291456, rate 197617 lines/sec (read 526 MB, rate 15.830836207384 MB/sec)
+elapsed 1.322356, lines 6553600, rate 198240 lines/sec (read 548 MB, rate 15.8807461833273 MB/sec)
+elapsed 1.323605, lines 6815744, rate 198053 lines/sec (read 570 MB, rate 16.6212729628552 MB/sec)
+elapsed 1.323397, lines 7077888, rate 198084 lines/sec (read 592 MB, rate 15.8682541973421 MB/sec)
+elapsed 1.327692, lines 7340032, rate 197443 lines/sec (read 614 MB, rate 15.8169213944198 MB/sec)
+elapsed 1.319842, lines 7602176, rate 198617 lines/sec (read 636 MB, rate 16.6686618549796 MB/sec)
+elapsed 1.319823, lines 7864320, rate 198620 lines/sec (read 658 MB, rate 15.9112244596435 MB/sec)
+elapsed 1.325287, lines 8126464, rate 197801 lines/sec (read 680 MB, rate 15.8456243817377 MB/sec)
+elapsed 1.322361, lines 8388608, rate 198239 lines/sec (read 702 MB, rate 16.6369092857397 MB/sec)
+elapsed 1.311892, lines 8650752, rate 199821 lines/sec (read 723 MB, rate 16.0074152445476 MB/sec)
+elapsed 1.316752, lines 8912896, rate 199083 lines/sec (read 745 MB, rate 15.9483334750963 MB/sec)
+elapsed 1.325395, lines 9175040, rate 197785 lines/sec (read 767 MB, rate 15.8443331987823 MB/sec)
+elapsed 1.32268, lines 9437184, rate 198191 lines/sec (read 789 MB, rate 15.8768560800798 MB/sec)
+elapsed 1.320944, lines 9699328, rate 198452 lines/sec (read 811 MB, rate 15.8977216293802 MB/sec)
+elapsed 1.328471, lines 9961472, rate 197327 lines/sec (read 833 MB, rate 15.8076465350015 MB/sec)
+elapsed 1.32093, lines 10223616, rate 198454 lines/sec (read 855 MB, rate 15.897890122868 MB/sec)
+elapsed 1.317764, lines 10485760, rate 198930 lines/sec (read 877 MB, rate 15.9360856723966 MB/sec)
+elapsed 1.322277, lines 10747904, rate 198251 lines/sec (read 899 MB, rate 15.8816949852414 MB/sec)
+elapsed 1.31688, lines 11010048, rate 199064 lines/sec (read 921 MB, rate 15.946783305996 MB/sec)
+elapsed 1.32332, lines 11272192, rate 198095 lines/sec (read 943 MB, rate 15.8691775231992 MB/sec)
+elapsed 1.325156, lines 11534336, rate 197821 lines/sec (read 965 MB, rate 15.8471908213071 MB/sec)
+elapsed 1.32063, lines 11796480, rate 198499 lines/sec (read 987 MB, rate 15.9015015560755 MB/sec)
+elapsed 1.322247, lines 12058624, rate 198256 lines/sec (read 1009 MB, rate 15.8820553194675 MB/sec)
+
+
+FINAL REPORT:
+
+elapsed 61.869875, lines 12236390, rate 197776 lines/sec (read 1024 MB, rate 16.5508658292909 MB/sec)
+
+
+  UID   PID  PPID CPU PRI NI      VSZ    RSS WCHAN  STAT   TT       TIME COMMAND
+  502 20163 20161   0  31  0    78000   2164 -      S+   s003    1:01.56 /usr/bin/perl ./max_line_rate.pl
