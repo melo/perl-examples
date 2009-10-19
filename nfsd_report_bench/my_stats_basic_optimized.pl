@@ -25,33 +25,35 @@ $header1 = <STDIN>;
 while(<STDIN>) {
     $lines++;
     $t += length($_);
-    my @field = split ' ', $_;
 
-    if ($field[6] eq 'request') {
-        $req_ops[$field[9]]++;
-        if ($field[9] == 7) {
-            $write += $field[12];
+    my ($ts)    = /^(\d+)/gco;
+    my ($type)  = /(\w)\sV/gco;
+    my ($op)    = /\s(\d\d?)\s\w/gco;
+    my ($bytes) = /\w\s(\d+)\s/gco;
 
-            my $ts = substr($field[0], 0, 10);
+    if ($type eq 't') {
+        $req_ops[$op]++;
+        if ($op == 7) {
+            $write += $bytes;
+
             $ts -= $ts % 3600; # Normalize by the hour.
 
             $write_ops{$ts}++;
-            $write_bytes{$ts} += $field[12];
+            $write_bytes{$ts} += $bytes;
         }
-    } elsif ($field[6] eq 'response') {
-        $res_ops[$field[9]]++;
-        if ($field[9] == 6) {
-            $read += $field[12];
+    } elsif ($type eq 'e') {
+        $res_ops[$op]++;
+        if ($op == 6) {
+            $read += $bytes;
 
-            my $ts = substr($field[0], 0, 10);
             $ts -= $ts % 3600; # Normalize by the hour.
 
             $read_ops{$ts}++;
-            $read_bytes{$ts} += $field[12];
+            $read_bytes{$ts} += $bytes;
         }
     }
 
-    if (($lines & 0x3ffff) == 0) {
+    if (($lines & 0x7ffff) == 0) {
       my $now = [gettimeofday];
       my $d = tv_interval($tlast, $now);
       $tlast = $now;
@@ -76,8 +78,8 @@ foreach (0..21) {
 print "Total # of NFSOPs: \t", $nops, "\n";
 print "Data Read (Gb):   \t", sprintf("%.2f", ($read  >> 20) / 1024), " Gb\n";
 print "Data Written (Gb):\t", sprintf("%.2f", ($write >> 20) / 1024), " Gb\n";
-print "Read/Write bytes ratio:\t", sprintf("%.2f", $read / $write), "x\n";
-print "Read/Write ops ratio:\t", sprintf("%.2f", $req_ops[6] / $req_ops[7]), "x\n\n\n";
+print "Read/Write bytes ratio:\t", sprintf("%.2f", $read / $write), "x\n" if $write;
+print "Read/Write ops ratio:\t", sprintf("%.2f", $req_ops[6] / $req_ops[7]), "x\n\n\n" if $req_ops[7];
 
 print "Number of Read Operations:\n";
 
@@ -113,4 +115,4 @@ my $d = tv_interval($t0);
 
 print "lines $lines bytes $t\n";
 print "Size mega ".int($t/(1024*1024))." reads $c\n";
-print "Lines/sec ".int($lines/$d)." MB/sec ".int($t/$d)."\n";
+print "Lines/sec ".int($lines/$d)." MB/sec ".int($t/$d/(1024*1024))."\n";
