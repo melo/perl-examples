@@ -1,0 +1,21 @@
+  UID   PID  PPID CPU PRI NI      VSZ    RSS WCHAN  STAT   TT       TIME COMMAND
+  502 19155 16942   0  27  0    76884   2348 -      S+   s003    0:00.03 perl bench_splitters.pl
+
+Comparing split with regexp to extract data from lines:
+
+           Rate  split regexp
+split   79661/s     --   -40%
+regexp 133062/s    67%     --
+
+
+Measuring impact of the bookkeeping:
+
+Benchmark: running e_and_6, e_and_other, t_and_7, t_and_other for at least 3 CPU seconds...
+   e_and_6:  3 wallclock secs ( 3.16 usr +  0.01 sys =  3.17 CPU) @ 478170.03/s (n=1515799)
+e_and_other:  3 wallclock secs ( 3.13 usr +  0.02 sys =  3.15 CPU) @ 1103946.98/s (n=3477433)
+   t_and_7:  3 wallclock secs ( 3.15 usr +  0.01 sys =  3.16 CPU) @ 510630.38/s (n=1613592)
+t_and_other:  3 wallclock secs ( 3.14 usr +  0.03 sys =  3.17 CPU) @ 1302450.16/s (n=4128767)
+
+
+  UID   PID  PPID CPU PRI NI      VSZ    RSS WCHAN  STAT   TT       TIME COMMAND
+  502 19155 16942   0  30  0    76884   2380 -      S+   s003    0:38.17 perl bench_splitters.pl
