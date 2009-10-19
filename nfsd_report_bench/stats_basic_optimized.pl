@@ -113,4 +113,4 @@ my $d = tv_interval($t0);
 
 print "lines $lines bytes $t\n";
 print "Size mega ".int($t/(1024*1024))." reads $c\n";
-print "Lines/sec ".int($lines/$d)." MB/sec ".int($t/$d)."\n";
+print "Lines/sec ".int($lines/$d)." MB/sec ".int($t/$d/(1024*1024))."\n";
