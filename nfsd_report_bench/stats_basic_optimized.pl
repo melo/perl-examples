@@ -51,7 +51,7 @@ while(<STDIN>) {
         }
     }
 
-    if (($lines & 0x3ffff) == 0) {
+    if (($lines & 0x7ffff) == 0) {
       my $now = [gettimeofday];
       my $d = tv_interval($tlast, $now);
       $tlast = $now;
